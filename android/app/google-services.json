@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "200245744116",
+    "project_id": "cc-2021",
+    "storage_bucket": "cc-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200245744116:android:11bf1bdd001e14fa99e9a1",
+        "android_client_info": {
+          "package_name": "app.careconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200245744116-nn41c9iu5c3lkikrjm2c6am014dg8jqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDzxgJVp3R-IRxXL8yXD5-by7T0ViRu34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200245744116-nn41c9iu5c3lkikrjm2c6am014dg8jqu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "200245744116-fr71mcq3c7lom24gpjp0lt04asqdvl3q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.careconnect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
