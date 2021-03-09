@@ -8,7 +8,7 @@ import 'package:formz/formz.dart';
 part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
-  final AuthenticationeRepository _authenticationeRepository;
+  final AuthenticationRepository _authenticationeRepository;
 
   LoginCubit(this._authenticationeRepository)
       : assert(_authenticationeRepository != null),

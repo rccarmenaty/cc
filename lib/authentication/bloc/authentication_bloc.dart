@@ -11,11 +11,11 @@ part 'authentication_state.dart';
 
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
-  final AuthenticationeRepository _authenticationeRepository;
+  final AuthenticationRepository _authenticationeRepository;
   StreamSubscription<User> _userSuscription;
 
   AuthenticationBloc(
-      {@required AuthenticationeRepository authenticationeRepository})
+      {@required AuthenticationRepository authenticationeRepository})
       : assert(authenticationeRepository != null),
         _authenticationeRepository = authenticationeRepository,
         super(const AuthenticationState.unknown()) {

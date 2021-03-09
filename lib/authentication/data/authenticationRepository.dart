@@ -15,10 +15,10 @@ class LogOutFailure implements Exception {}
 /// {@template authentication_repository}
 /// Repository which manages user authentication.
 /// {@endtemplate}
-class AuthenticationeRepository {
+class AuthenticationRepository {
   final firabase_auth.FirebaseAuth _firebaseAuth;
 
-  AuthenticationeRepository({firabase_auth.FirebaseAuth firebaseAuth})
+  AuthenticationRepository({firabase_auth.FirebaseAuth firebaseAuth})
       : _firebaseAuth = firebaseAuth ?? firabase_auth.FirebaseAuth.instance;
 
   /// Stream of [User] which will emit the current user when

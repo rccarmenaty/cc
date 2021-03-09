@@ -2,6 +2,7 @@ import 'package:cc2021/authentication/view/forms/login/cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
+import 'package:cc2021/authentication/view/signup.dart';
 
 class LoginForm extends StatelessWidget {
   @override
@@ -28,8 +29,8 @@ class LoginForm extends StatelessWidget {
               const SizedBox(height: 16.0),
               _LoginButton(),
               const SizedBox(height: 16.0),
-
-              ],
+              _SignUpButton()
+            ],
           ))),
     );
   }
@@ -86,12 +87,27 @@ class _LoginButton extends StatelessWidget {
               : RaisedButton(
                   key: const Key('LoginForm_RaisedButton'),
                   child: const Text('Login'),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0)),
                   color: const Color(0xFFFFD600),
                   onPressed: state.status.isValidated
-                             ? () => context.read<LoginCubit>().logInWithCredentials()
-                             : null 
-                );
+                      ? () => context.read<LoginCubit>().logInWithCredentials()
+                      : null);
         });
+  }
+}
+
+class _SignUpButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return TextButton(
+      key: const Key('loginForm_createAccount_flatButton'),
+      child: Text(
+        'CREATE ACCOUNT',
+        style: TextStyle(color: theme.primaryColor),
+      ),
+      onPressed: () => Navigator.of(context).push<void>(SignUpPage.route()),
+    );
   }
 }

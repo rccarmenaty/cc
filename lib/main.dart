@@ -13,5 +13,5 @@ void main() async {
   await Firebase.initializeApp();
   EquatableConfig.stringify = kDebugMode;
   Bloc.observer = SimpleBlocObserver();
-  runApp(App(authenticationeRepository: AuthenticationeRepository()));
+  runApp(App(authenticationeRepository: AuthenticationRepository()));
 }

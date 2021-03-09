@@ -9,7 +9,7 @@ import 'package:formz/formz.dart';
 part 'signup_state.dart';
 
 class SignupCubit extends Cubit<SignupState> {
-  final AuthenticationeRepository _authenticationeRepository;
+  final AuthenticationRepository _authenticationeRepository;
 
   SignupCubit(this._authenticationeRepository)
       : assert(_authenticationeRepository != null),
@@ -42,7 +42,7 @@ class SignupCubit extends Cubit<SignupState> {
             Formz.validate([state.email, state.password, confirmedPassword])));
   }
 
-  Future<void> signUpFormSubmit() async {
+  Future<void> signUpFormSubmitted() async {
     if (!state.status.isValidated) return;
 
     emit(state.copyWith(status: FormzStatus.submissionSuccess));

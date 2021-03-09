@@ -2,12 +2,12 @@ import 'package:cc2021/authentication/bloc/authentication_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'authentication/data/authenticationRepository.dart';
-import 'authentication/view/home.dart';
 import 'authentication/view/login.dart';
 import 'authentication/view/splash.dart';
+import 'home/home.dart';
 
 class App extends StatelessWidget {
-  final AuthenticationeRepository authenticationeRepository;
+  final AuthenticationRepository authenticationeRepository;
 
   const App({Key key, @required this.authenticationeRepository})
       : assert(authenticationeRepository != null),
